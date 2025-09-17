@@ -5,38 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Header container */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #39123a;
-}
-
-/* Site name (left side) */
-.site-name {
-    color: white;
-    font-size: 1.8em;
-    text-decoration: none;
-}
-
-/* Navigation menu (right side) */
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 1.2em;
-}
-
-.header, .site-name, .nav-menu a {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.nav-menu a:hover {
-    text-decoration: underline;
-}
-
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -218,4 +186,93 @@ footer {
     margin-bottom: 1em; 
     font-weight: normal;     /* Сделать текст не жирным */
     font-size: 32px;         /* Задать размер текста */
+}
+
+/* Header */
+
+/* Header container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #39123a;
+  position: relative;
+}
+
+/* Site name */
+.site-name {
+  color: white;
+  font-size: 1.8em;
+  text-decoration: none;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif;
+  transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* --- адаптив --- */
+@media (max-width: 1150px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #39123a;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
 }
