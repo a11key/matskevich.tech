@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksei Matskevich</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> <!-- main font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- icons -->
+
+</head>
+<body>
+  <header id="header-placeholder"></header>
+    <main>
+        <div class = "container main-content">
+            <div class = "photo">
+                <img src = "assets/images/cropped_photo.png" alt="My photo">
+            </div>
+            <div class = "bio">
+                <h1>Welcome to my personal portfolio website!</h1>
+                <p>
+                    My name is Aleksei Matskevich. I’m a third-year student at the 
+                    Moscow Institute of Physics and Technology (MIPT), majoring in 
+                    Applied Mathematics and Physics at the School of Electronics, 
+                    Photonics and Molecular Physics (SEPMP). I also work as a 
+                    researcher and developer at the Symbiotic Design Department of the 
+                    Institute for Electric Mobility, MIPT.
+                </p>
+
+                <p>
+                    My main interests lie in various STEM fields — particularly 
+                    battery modeling, battery management systems, embedded systems, 
+                    plasma physics, data analysis, robotics, and machine learning.
+                </p>
+
+                <p>
+                    This website serves as my personal portfolio, where you’ll find 
+                    an overview of my academic and professional projects, publications, 
+                    achievements, and selected moments from my personal life and activities.
+                </p>
+
+                <a href="contacts.html" class="contact-button">Contact me</a>
+
+            </div>
+        </div>
+    </main>
+    <footer id="footer-placeholder"></footer>
+
+    <script>
+        async function loadHTML(id, url) {
+        const resp = await fetch(url);
+        if (resp.ok) {
+            const html = await resp.text();
+            document.getElementById(id).innerHTML = html;
+        } else {
+            console.error('Failed to load', url);
+        }
+        }
+
+        loadHTML('header-placeholder', 'header.html');
+        loadHTML('footer-placeholder', 'footer.html');
+    </script>
+</body>
+</html>

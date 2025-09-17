@@ -1,0 +1,221 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #39123a;
+}
+
+/* Site name (left side) */
+.site-name {
+    color: white;
+    font-size: 1.8em;
+    text-decoration: none;
+}
+
+/* Navigation menu (right side) */
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+.header, .site-name, .nav-menu a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #39123a;
+    color: #ffffff;
+}
+
+/* MAIN BODY */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;                /* Space between photo and bio (instead of margin) */
+}
+
+.photo {
+    flex: 0 0 auto; /* Prevent photo from growing or shrinking */
+    width: 60%;     /* Responsive width, e.g., 25% of parent */
+    min-width: 150px;
+    max-width: 720px;
+}
+
+.photo img {
+    width: 100%;           /* Fill the .photo container */
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.bio {
+    flex: 1;                             /* Takes remaining space */
+    font-family: 'Montserrat', sans-serif;
+    min-width: 250px;                    /* Prevent overflow on narrow screens */
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+.bio p {
+    margin-bottom: 1em; 
+}
+.bio h1 {
+    margin-bottom: 1em; 
+    font-weight: normal;     /* Сделать текст не жирным */
+    font-size: 32px;         /* Задать размер текста */
+}
+.bio h2 {
+    margin-bottom: 0.5em; 
+    font-weight: normal;     /* Сделать текст не жирным */
+    font-size: 24px;         /* Задать размер текста */
+}
+
+.contacts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contacts-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contacts-list i {
+  margin-right: 10px;
+  width: 20px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.contacts-list a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.2s;
+}
+
+.contacts-list a:hover {
+  color: #007bff;
+}
+
+/* FOOTER */
+footer {
+  background-color: #200a20;
+  padding: 20px;
+  margin-top: 50px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.footer-quote {
+  font-style: italic;
+  font-size: 20px;
+  margin-left: 2;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* Contact button */
+
+.contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #200a20; /* синий цвет */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #110511; /* темнее при наведении */
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Центрирует по вертикали, но оставляет место для header и footer */
+  text-align: center;
+}
+
+.contacts-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contacts-list li {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.contacts-list a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.2s;
+}
+
+.contacts-list a:hover {
+  color: #007bff;
+}
+
+.center-container h1 {
+    margin-bottom: 1em; 
+    font-weight: normal;     /* Сделать текст не жирным */
+    font-size: 32px;         /* Задать размер текста */
+}
